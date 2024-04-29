@@ -1,3 +1,3 @@
-@Library('buildAndPushDockerImage') _
+@Library('test') _
 
-buildAndPushDockerImage('vinod:v1', '810678507647', 'us-east-2')
+test('vinod:v1', '810678507647', 'us-east-2')
