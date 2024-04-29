@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend-todo
+  template:
+    metadata:
+      labels:
+        app: backend-todo
+    spec:
+      containers:
+      - name: backend
+        image: vinod200103/backend:v1  # Replace with your Docker image
+        ports:
+        - containerPort: 3000  # Assuming your React app listens on port 80
