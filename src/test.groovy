@@ -20,7 +20,7 @@ def call(String imageName, String awsAccountId, String awsRegion) {
             stage('mvn ') {
                 steps {
                     script {
-                        bat 'mvn clean package'
+                        sh 'mvn clean package'
                     }
                 }
             }
